@@ -1,0 +1,505 @@
+:root {
+  --extra-light: #faf5ff;
+  --background-color: #ffffff;
+ 
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: "Sen", sans-serif;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+
+  
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+}
+
+.nav-content {
+  max-width: 1200px; 
+  margin: auto;
+  padding: 24px 16px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-family: 'Arizonia', cursive;
+  font-size: 36px;
+  color: black;
+  transition: 0.3s;
+}
+
+nav .logo a:hover {
+  color: rgb(141, 6, 6);
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 14px; 
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 8px 16px; 
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  color: rgb(117, 8, 8);
+  border-top: solid 1px red;
+  border-bottom: solid 1px red;
+}
+
+.hero-section {
+  background-color: var(--background-color);
+}
+
+.hero-section-container {
+  min-height: 100vh;
+  max-width: 1200px; 
+  margin: auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  color: black;
+  margin-bottom: 16px; 
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.description {
+  line-height: 24px;
+  margin-bottom: 32px; 
+  color: black;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.resume-btns {
+  display: flex;
+  gap: 16px; 
+}
+
+.resume-btns button {
+  font-family: "Sen", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 16px 32px; 
+  outline: none;
+  border: 1.5px solid rgb(112, 5, 5);
+  color: rgb(107, 6, 6);
+  background-color: transparent;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.resume-btns .view-resume:hover {
+  background-color: var(--purple-color);
+  color: red;
+  border: solid red 1px;
+}
+
+.hero-image {
+  display: grid;
+  place-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 0;
+}
+
+
+
+@media (max-width: 750px) {
+  nav {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 64px);
+    left: -100%;
+    top: 64px;
+    background-color: var(--background-color);
+    flex-direction: column;
+    justify-content: center;
+    gap: 48px; 
+  }
+
+  ul li a {
+    font-size: 20px;
+  }
+
+  .hero-section-container {
+    padding: 100px 16px 80px 16px; 
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+
+  .resume-btns {
+    margin: auto;
+  }
+}
+
+
+.skills-section {
+  padding: 60px 20px;
+  background-color: var(--background-color);
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: "Cinzel", serif;
+}
+
+.skills-section h2:hover{
+  text-decoration: underline;
+    cursor: pointer;
+}
+
+.content-title{
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-family: "Cinzel", serif;
+
+
+}
+
+span{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.col-top p{
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: "Shadows Into Light", cursive;
+
+
+}
+
+.col-top .resume-btns{
+  margin-left: 10px;
+  display: inline-block;
+  border: solid 1px ;
+}
+
+.col-top .resume-btns:hover{
+  background-color: var(--purple-color);
+  color: red;
+  border: solid red 1px;
+
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: 'Sen', sans-serif;
+}
+
+.skill i {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+.skill span {
+  flex: 1;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.skill-bar {
+  position: relative;
+  flex: 4;
+  height: 25px;
+  background-color: #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.skill-level-html {
+  height: 100%;
+  background-color: #a80000;
+  border-radius: 12px 0 0 12px;
+}
+
+.skill-level-css {
+  height: 100%;
+  background-color: rgb(108, 6, 204);
+  border-radius: 12px 0 0 12px;
+}
+
+.skill-level-js {
+  height: 100%;
+  background-color: #124914;
+  border-radius: 12px 0 0 12px;
+}
+
+.skill-level-python {
+  height: 100%;
+  background-color: #a80000;
+  border-radius: 12px 0 0 12px;
+}
+
+.skill-level-dapy {
+  height: 100%;
+  background-color: #236153;
+  border-radius: 12px 0 0 12px;
+}
+
+.skill-level-dabi {
+  height: 100%;
+  background-color: #fd440c;
+  border-radius: 12px 0 0 12px;
+}
+
+
+
+.percentage {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.projects-section {
+  background-color: var(--background-color);
+  padding: 60px 0;
+}
+
+.projects-section .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: black;
+  font-family: "Cinzel", serif;
+}
+
+.projects-section h2:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.project {
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 20px); /* Flex-grow, flex-shrink, flex-basis */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+
+}
+
+.project:hover img {
+  transform: scale(1.05); /* Scale up the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.project h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: rgb(139, 4, 4);
+  font-family: "Cinzel", serif;
+}
+
+.project h3:hover{
+ text-decoration: line-through;
+  cursor: pointer;
+}
+
+.project p {
+  font-size: 16px;
+  color: black;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.project p:hover{
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .project {
+    flex: 1 1 calc(50% - 20px); /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex: 1 1 100%; /* Single column on small screens */
+  }
+}
+
+
+footer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex:1 1 300px ;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 10px;
+  background-color: #691616;
+}
+em{
+  color: wheat;
+}
+
+footer h4 {
+  font-family: "Cinzel", serif;
+  color: wheat;
+  margin-bottom: 5px;
+}
+
+footer h4:hover{
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+
+footer p{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-size: small;
+  font-style: normal;
+  color: whitesmoke;
+}
+
+.social-links{
+  font-size: 24px;
+  color: wheat; 
+  margin-right: 10px; 
+  transition: color 0.3s; 
+}
+
+.social-links:hover {
+  color: #007bff; 
+}
+
+
+
+.right-section ul li a{
+  color: whitesmoke;
+  font-size: small;
+  padding: 10px;
+}
+
+.right-section ul li a:hover{
+  text-decoration: line-through;
+  
+}
+
+.email#email{
+  color: whitesmoke;
+}
+.email#email:hover{
+  color: #007bff;
+
+}
+
+.complaints-box{
+  border: none;
+  padding: 7px;
+}
+
+.complaints-box::placeholder{
+  font-size: 15px;
+} 
+
+.submit-btn-footer{
+  border: solid 1px;
+  padding: 3px;
+  font-family: "Shadows Into Light", cursive;
+  color: whitesmoke;
+  background-color:  #691616;
+
+}
+
+.submit-btn-footer:hover{
+  color: #691616;
+  background-color: wheat;
+  padding: 3px;
+  border: solid 1px;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.resumeProfile{
+  /* font-family: 'Times New Roman', Times, serif; */
+  
+}
